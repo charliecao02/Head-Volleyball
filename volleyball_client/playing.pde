@@ -57,8 +57,17 @@ void playing() {
   if (c.available() > 0) { 
     input = c.readString(); 
     input = input.substring(0, input.indexOf("\n"));  
-
-    data = float(split(input, ' '));
-    println(data);
+    if(complete(input)){
+      data = float(split(input, ' '));
+      println(data);
+    }
   }
+}
+boolean complete(String input){
+  int spaces=0;
+    for (int i = 0; i < input.length(); i++){
+        if (input.charAt(i)==' ') spaces++;
+    }
+    if (spaces==5) return true;
+    else return false;
 }

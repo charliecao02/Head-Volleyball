@@ -101,7 +101,7 @@ void setup() {
   net.setNoStroke();
   world.add(net);
   
-  c = new Client(this, "10.32.43.192", 12345); 
+  c = new Client(this, "10.32.43.142", 12345);
 }
 
 void draw() {
